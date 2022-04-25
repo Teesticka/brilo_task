@@ -1,0 +1,278 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.12,
+* Autoprefixer: v10.4.4
+* Browsers: last 4 version
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --color-dark-green: rgba(30,71,78,1);
+    --color-light-green: rgba(52,152,166,1);
+    --bg-color: rgba(51,51,51,1);
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background: var(--bg-color);
+}
+
+.container{
+    width: min(1100px, 98%);
+    margin: 0 auto;
+}
+
+/****** DEFINED VALUES  *******/
+a, h1, h2, h3{
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    font-weight: 300;
+}
+
+p{
+    font-weight: 300;
+}
+
+
+
+
+/****** HEADER  ******/
+header{
+    background: var(--color-dark-green);
+    width: 98%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+header ul{
+    height: 48px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1.75rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+
+header ul li a{
+    position: relative;
+}
+
+header ul li a::after{
+    content: "";
+    position: absolute;
+    left: -1;
+    bottom: -5;
+    width: 100%;
+    height: 2px;
+    background: var(--color-light-green);
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform 250ms ease-in;
+    transition: -webkit-transform 250ms ease-in;
+    -o-transition: transform 250ms ease-in;
+    transition: transform 250ms ease-in;
+    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+header ul li a:hover::after{
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+        -ms-transform-origin: left;
+            transform-origin: left;
+}
+
+/****** ABOUT ME  ******/
+.about-me{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 100px;
+    gap: 20px;
+}
+
+.about-me .text{
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 3em;
+    min-height: 300px;
+}
+
+.about-me > * {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+}
+
+.about-me .text h1{
+    font-size: 2rem;
+    line-height: 2rem;
+
+}
+
+.about-me a{
+    background: var(--color-light-green);
+    padding: 10px 50px;
+    position: relative;
+}
+
+.about-me a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(30,71,78,0.3);
+    top: 0;
+    left: 0;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: right;
+        -ms-transform-origin: right;
+            transform-origin: right;
+    -webkit-transition: -webkit-transform 250ms ease-in;
+    transition: -webkit-transform 250ms ease-in;
+    -o-transition: transform 250ms ease-in;
+    transition: transform 250ms ease-in;
+    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+
+.about-me a:hover::after{
+    -webkit-transform: scaleX(1);
+        -ms-transform: scaleX(1);
+            transform: scaleX(1);
+    -webkit-transform-origin: left;
+        -ms-transform-origin: left;
+            transform-origin: left;
+}
+
+.about-me .img{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+}
+
+.img img{
+    width: 60%;
+    height: 100%;
+}
+
+
+/****** PORTFOLIO  ******/
+.portfolio{
+    margin-bottom: 100px;
+}
+
+h2{
+    font-size: 1.5rem;
+    padding: 20px 0;
+    
+}
+
+.my-projects{
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+    gap: 20px;
+}
+
+.one-project{
+    height: 400px;
+}
+
+.one-project .img{
+    position: relative;
+    background: #ccc;
+    height: 60%;
+}
+
+.one-project .img::after{
+    position: absolute;
+    content: "";
+    width: 90%;
+    height: 90%;
+    top: 5%;
+    left: 5%;
+    border: 2px solid #ccc;
+}
+
+.one-project .img img{
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.project-text{
+    background: var(--color-light-green);
+    height: 40%;
+    padding: 0 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+}
+
+/****** PORTFOLIO  ******/
+footer p{
+    text-align: center;
+    height: 2rem;
+    font-size: 0.8rem;
+}
+
+
+/****** MEDIA QUERIES */
+
+@media (max-width: 650px){
+    .about-me{
+        display: block;
+    }
+
+    .about-me .img{
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    h1, p, h2, h3{
+        text-align: center;
+    }
+
+    .link{
+        margin: 0 auto;
+    }
+}
